@@ -3,9 +3,8 @@ package ru.zhagot.ls2;
 public class Main {
     public static void main(String[] args) {
 
-
-        convNumbs(); // ДЗ 1.
-        arrFully();
+        convNumbs();    // ДЗ 1.
+        arrFully();     // ДЗ 2.
     }
         private static void convNumbs() { // ДЗ 1.
         int[] arrNumbers = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
@@ -33,4 +32,6 @@ public class Main {
             System.out.println(arrFull[i]);
         }
     }
+//    Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ]
+//    пройти по нему циклом, и числа меньшие 6 умножить на 2;
 }
