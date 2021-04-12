@@ -5,6 +5,8 @@ public class Main {
 
         convNumbs();    // ДЗ 1.
         arrFully();     // ДЗ 2.
+        System.out.println();
+        arrX2();        // ДЗ 3.
     }
         private static void convNumbs() { // ДЗ 1.
         int[] arrNumbers = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
@@ -34,4 +36,15 @@ public class Main {
     }
 //    Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ]
 //    пройти по нему циклом, и числа меньшие 6 умножить на 2;
+    private static void arrX2 () {
+        int[] arrX2small6 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < arrX2small6.length; i++){
+            int x = arrX2small6[i];
+            if (arrX2small6[i] < 6){
+                arrX2small6[i] = arrX2small6[i] * 2;
+                System.out.println("Значение в массиве: " + x + " < 6 умножаем на 2 равно: " + arrX2small6[i]);
+            } else System.out.println(arrX2small6[i] + " > 6 - не умножаем.");
+        }
+
+    }
 }
