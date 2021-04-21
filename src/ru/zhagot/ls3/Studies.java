@@ -61,7 +61,7 @@ public class Studies {
                 }
             }
             System.out.println("Хотите играть заново? Y/N");
-        } while (scanner.next().equals("Y"));
+        } while (scanner.next().equalsIgnoreCase("Y"));
 
         scanner.close();
     }
@@ -107,6 +107,6 @@ public class Studies {
             }
         }
         System.out.println("Вы успешно расставили корабли! ");
-        return getUserWarField();
+        return userWarField;
     }
 }
