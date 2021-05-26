@@ -6,22 +6,27 @@ import java.util.Scanner;
 public class Main {
 
     public static Scanner scanner = new Scanner(System.in);
+    public static Random random = new Random();
 
     public static void main(String[] args) {
-
+    do {
         int robotRandomNumber = getRobotRandomNumber();
         System.out.print("ПК загадал число: ");
         System.out.println(robotRandomNumber);
         System.out.print("Введите своё число: ");
         int humanInputNumber = getHumanInputNumber();
         System.out.println("Ты ввёл число: " + humanInputNumber);
-        if (robotRandomNumber == humanInputNumber) {
-            System.out.println("Вы угадали! Ура!");
-        } else System.out.println("Не угаданно!");
+
+            if (robotRandomNumber == humanInputNumber) {
+                System.out.println("Вы угадали! Ура!");
+            } else System.out.println("Не угаданно!");
+
+        System.out.println("Хотите играть заново? Y/N");
+    } while (scanner.next().equalsIgnoreCase("Y"));
     }
 //    ПК загадывает число.
     public static int getRobotRandomNumber() {
-        Random randomNumber = new Random();
+        Random randomNumber = random;
         int randomInt = randomNumber.nextInt(10);
         return randomInt;
     }
